@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#6e1423"></rect><text x="50" y="62" font-size="34" font-family="sans-serif" font-weight="800" fill="#fff" text-anchor="middle">PD</text></svg></template>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f7f6f3;font-family:'Manrope',sans-serif;color:#15151a}
+a{color:#6e1423;text-decoration:none}
+a:hover{color:#4d0d18}
+</style>
+</helmet>
+<div>
+<header style="position:sticky;top:0;z-index:50;background:rgba(247,246,243,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e7e7ea">
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width:1320px;margin:0 auto;padding:14px 32px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px">
+      <a href="/" aria-label="PCM — на главную" style="display:flex;align-items:center"><img src="images/logo-pcm-dark.png" alt="PCM" width="536" height="344" style="height:52px;width:auto;display:block"></a>
+      <div style="text-align:center;font-size:17px;font-weight:700;letter-spacing:.04em;text-transform:uppercase">Ваш эксперт по Porsche с 2007 года</div>
+      <div style="text-align:right;line-height:1.5">
+        <a href="tel:+74957879911" style="font-size:19px;font-weight:800;color:#15151a" style-hover="color:#6e1423">+7 (495) 787-9-911</a>
+        <div style="font-size:13px;color:#6d6d76">Москва, Ленинградское шоссе, 71 А, стр. 10</div>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+      <a href="/" aria-label="PCM — на главную" style="display:flex;align-items:center"><img src="images/logo-pcm-dark.png" alt="PCM" width="536" height="344" style="height:40px;width:auto;display:block"></a>
+      <div style="text-align:right;line-height:1.4">
+        <a href="tel:+74957879911" style="display:inline-block;padding:6px 0;font-size:17px;font-weight:800;color:#15151a">+7 (495) 787-9-911</a>
+        <div style="font-size:11px;color:#6d6d76">Ленинградское ш., 71 А, стр. 10</div>
+      </div>
+    </div>
+  </sc-if>
+</header>
+
+<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+  <section style="position:relative;height:82vh;min-height:560px;overflow:hidden;background:#fff">
+    <img src="images/hero.jpg" alt="Трактор Porsche-Diesel на фоне виноградников" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom">
+    <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,255,255,.98) 0px,rgba(255,255,255,.96) 560px,rgba(255,255,255,.55) 780px,rgba(255,255,255,0) 980px)"></div>
+    <div style="position:absolute;left:0;right:0;top:0;padding:72px 32px 0">
+      <div style="max-width:1320px;margin:0 auto">
+        <div style="max-width:560px">
+          <div style="display:inline-block;background:#6e1423;color:#fff;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px">1937–1963</div>
+          <h1 style="margin:18px 0 0;font-size:clamp(44px,4.4vw,62px);line-height:1.05;font-weight:800;color:#15151a;text-wrap:balance">Тракторы PORSCHE‑DIESEL</h1>
+          <p style="margin:16px 0 0;font-size:20px;line-height:1.55;color:#3c3c44;max-width:460px">Малоизвестная глава истории марки: около 120 000 машин, созданных по чертежам Фердинанда Порше</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</sc-if>
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+  <section style="background:#fff">
+    <div style="padding:36px 20px 24px">
+      <div style="display:inline-block;background:#6e1423;color:#fff;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px">1937–1963</div>
+      <h1 style="margin:14px 0 0;font-size:clamp(32px,9vw,44px);line-height:1.08;font-weight:800;text-wrap:balance">Тракторы PORSCHE‑DIESEL</h1>
+      <p style="margin:12px 0 0;font-size:16px;line-height:1.55;color:#3c3c44">Малоизвестная глава истории марки: около 120 000 машин, созданных по чертежам Фердинанда Порше</p>
+    </div>
+    <img src="images/hero.jpg" alt="Трактор Porsche-Diesel на фоне виноградников" style="width:100%;height:300px;object-fit:cover;object-position:center bottom;display:block">
+  </section>
+</sc-if>
+
+<section style="padding:clamp(48px,8vw,88px) clamp(16px,4vw,32px) clamp(40px,7vw,72px)">
+  <div style="max-width:960px;margin:0 auto">
+    <div style="font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#6e1423">История создания</div>
+    <h2 style="margin:12px 0 28px;font-size:clamp(27px,4vw,40px);font-weight:800;line-height:1.15">От прототипа 1930‑х до серии Mannesmann</h2>
+    <div style="display:grid;gap:18px;font-size:clamp(16px,2vw,18px);line-height:1.7;color:#3c3c44">
+      <p style="margin:0">В начале 1930‑х годов Фердинанд Порше разработал прототипы тракторов с V‑образными бензиновыми двигателями воздушного охлаждения. Первый дизельный прототип (модель 113) появился ближе к 1939 году, но война остановила работы.</p>
+      <p style="margin:0">После войны Порше передал лицензию на производство тракторов сторонним фирмам. Сначала это была немецкая компания Allgaier GmbH, а в Австрии — Hofherr Schrantz. В 1956 году права на производство приобрела группа Mannesmann AG, которая запустила серийное производство на бывшем заводе Zeppelin в немецком Фридрихсхафене.</p>
+      <p style="margin:0">В 1962 году подразделение Porsche Diesel Motorenbau было приобретено компанией MAN, а в 1963 году производство тракторов прекратилось. Всего за этот период было выпущено около 120 000 машин.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:24px clamp(16px,4vw,32px) clamp(48px,7vw,80px)">
+  <div style="max-width:1320px;margin:0 auto">
+    <div style="font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#6e1423">Модельный ряд</div>
+    <h2 style="margin:12px 0 10px;font-size:clamp(27px,4vw,40px);font-weight:800;line-height:1.15">Модели тракторов Porsche</h2>
+    <p style="margin:0 0 clamp(28px,4vw,48px);font-size:clamp(16px,2vw,18px);line-height:1.6;color:#3c3c44;max-width:760px">Линейка включала несколько моделей, различавшихся количеством цилиндров двигателя — от одного до четырёх — и мощностью.</p>
+    <sc-if value="{{ isZigzag }}" hint-placeholder-val="{{ false }}">
+      <div style="display:grid;gap:clamp(36px,5vw,56px)">
+        <sc-for list="{{ models }}" as="m" hint-placeholder-count="4">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(20px,3.5vw,48px);align-items:center;direction: {{ m.dir }}">
+            <div style="direction:ltr;overflow:hidden;background:#fff;border:1px solid #e7e7ea">
+              <img src="{{ m.img }}" alt="{{ m.name }}" loading="lazy" style="width:100%;height:clamp(230px,30vw,380px);object-fit:cover;display:block"></div>
+            <div style="direction:ltr">
+              <div style="display:flex;align-items:baseline;gap:14px">
+                <div style="font-size:clamp(40px,5vw,56px);font-weight:800;color:#e7e7ea;line-height:1">{{ m.num }}</div>
+                <div style="width:34px;height:4px;background:#6e1423;transform:translateY(-14px)"></div>
+              </div>
+              <h3 style="margin:8px 0 6px;font-size:clamp(22px,3vw,28px);font-weight:800">{{ m.name }}</h3>
+              <div style="font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6d6d76;margin-bottom:16px">{{ m.spec }}</div>
+              <p style="margin:0;font-size:clamp(16px,2vw,17px);line-height:1.65;color:#3c3c44">{{ m.text }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{ isTiles }}" hint-placeholder-val="{{ true }}">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:clamp(14px,2vw,20px)">
+        <sc-for list="{{ models }}" as="m" hint-placeholder-count="4">
+          <div onClick="{{ m.toggle }}" style="cursor:pointer;background:#fff;border:1px solid {{ m.border }};transition:border-color .2s" style-hover="border-color:#6e1423">
+            <img src="{{ m.img }}" alt="{{ m.name }}" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block">
+            <div style="padding:16px 20px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+              <div>
+                <h3 style="margin:0 0 4px;font-size:19px;font-weight:800">{{ m.name }}</h3>
+                <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6d6d76">{{ m.spec }}</div>
+              </div>
+              <div style="flex:none;width:32px;height:32px;border:1.5px solid #6e1423;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:700;color:#6e1423;line-height:1">{{ m.plusChar }}</div>
+            </div>
+            <sc-if value="{{ m.showInline }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:0 20px 20px;border-top:1px solid #f0f0f2">
+                <p style="margin:14px 0 0;font-size:15px;line-height:1.65;color:#3c3c44">{{ m.text }}</p>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <sc-if value="{{ expandedModel }}" hint-placeholder-val="{{ false }}">
+        <div style="margin-top:20px;background:#fff;border:1px solid #e7e7ea;border-top:3px solid #6e1423;padding:clamp(20px,3vw,32px) clamp(20px,3.5vw,36px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(20px,3vw,36px);align-items:center">
+          <img src="{{ expandedModel.img }}" alt="{{ expandedModel.name }}" loading="lazy" style="width:100%;height:auto;max-height:320px;object-fit:contain;display:block">
+          <div>
+            <h3 style="margin:0 0 6px;font-size:24px;font-weight:800">{{ expandedModel.name }}</h3>
+            <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6d6d76;margin-bottom:14px">{{ expandedModel.spec }}</div>
+            <p style="margin:0;font-size:17px;line-height:1.65;color:#3c3c44">{{ expandedModel.text }}</p>
+          </div>
+        </div>
+      </sc-if>
+    </sc-if>
+  </div>
+</section>
+
+<section style="padding:clamp(56px,8vw,96px) clamp(16px,4vw,32px);background:#15151a">
+  <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(36px,6vw,88px);align-items:start">
+    <div>
+      <div style="font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#c97585">Инженерия</div>
+      <h2 style="margin:14px 0 16px;font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.12;color:#fff;text-wrap:balance">Особенности конструкции</h2>
+      <p style="margin:0;font-size:clamp(16px,2vw,18px);line-height:1.65;color:rgba(255,255,255,.65);max-width:420px">Тракторы Porsche Diesel выделялись рядом технических решений, опередивших своё время.</p>
+      <div style="margin-top:clamp(32px,5vw,56px);border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display:flex;gap:40px;flex-wrap:wrap">
+        <div>
+          <div style="font-size:clamp(38px,4.5vw,54px);font-weight:800;color:#fff;line-height:1">~120 000</div>
+          <div style="font-size:14px;color:rgba(255,255,255,.55);margin-top:8px;max-width:220px">машин выпущено за годы производства</div>
+        </div>
+        <div>
+          <div style="font-size:clamp(38px,4.5vw,54px);font-weight:800;color:#fff;line-height:1">1–4</div>
+          <div style="font-size:14px;color:rgba(255,255,255,.55);margin-top:8px;max-width:220px">цилиндра — модульная линейка двигателей</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <sc-for list="{{ features }}" as="f" hint-placeholder-count="5">
+          <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.12);align-items:start">
+            <div style="font-size:15px;font-weight:800;color:#c97585;letter-spacing:.06em;padding-top:3px">{{ f.idx }}<span style="display:block;width:22px;height:2px;background:rgba(255,255,255,.2);margin-top:10px"></span></div>
+            <div>
+              <h3 style="margin:0 0 6px;font-size:clamp(17px,2vw,19px);font-weight:800;color:#fff">{{ f.title }}</h3>
+              <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.6)">{{ f.text }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </sc-if>
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <sc-for list="{{ features }}" as="f" hint-placeholder-count="5">
+          <div style="border-bottom:1px solid rgba(255,255,255,.12)">
+            <div onClick="{{ f.toggle }}" style="display:flex;align-items:center;gap:14px;padding:16px 0;cursor:pointer;min-height:44px;box-sizing:border-box">
+              <div style="flex:none;font-size:14px;font-weight:800;color:#c97585;letter-spacing:.06em">{{ f.idx }}</div>
+              <h3 style="flex:1;margin:0;font-size:16px;font-weight:800;color:#fff;line-height:1.35">{{ f.title }}</h3>
+              <div style="flex:none;width:28px;height:28px;border:1.5px solid rgba(255,255,255,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;color:#fff;line-height:1">{{ f.chevron }}</div>
+            </div>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+              <p style="margin:0;padding:0 0 16px 30px;font-size:15px;line-height:1.6;color:rgba(255,255,255,.6)">{{ f.text }}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section style="padding:clamp(48px,7vw,72px) clamp(16px,4vw,32px)">
+  <div style="max-width:1100px;margin:0 auto;text-align:center">
+    <h2 style="margin:0 0 12px;font-size:clamp(25px,3.5vw,34px);font-weight:800">PCM — ваш эксперт по Porsche</h2>
+    <p style="margin:0 0 32px;font-size:clamp(16px,2vw,18px);color:#3c3c44">Сегодня мы занимаемся автомобилями Porsche — продажей и сервисным обслуживанием в Москве.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="https://pc-moscow.ru/cars" style="display:inline-block;flex:1 1 240px;max-width:340px;box-sizing:border-box;background:#6e1423;color:#fff;font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:18px 24px;text-align:center" style-hover="background:#4d0d18;color:#fff">Автомобили Porsche</a>
+      <a href="https://pc-moscow.ru/service" style="display:inline-block;flex:1 1 240px;max-width:340px;box-sizing:border-box;background:#15151a;color:#fff;font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:18px 24px;text-align:center" style-hover="background:#000;color:#fff">Сервисное обслуживание</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#0d0d10;color:rgba(255,255,255,.75);padding:clamp(40px,5vw,56px) clamp(16px,4vw,32px) 40px">
+  <div style="max-width:1320px;margin:0 auto">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.12)">
+      <img src="images/logo-pcm-light.png" alt="PCM" width="536" height="344" loading="lazy" style="height:46px;width:auto;display:block">
+      <div style="display:flex;gap:12px 28px;font-size:14px;flex-wrap:wrap">
+        <a href="https://pc-moscow.ru/legal/data-processing-policy" style="color:rgba(255,255,255,.75);padding:6px 0" style-hover="color:#fff">Политика обработки персональных данных</a>
+        <a href="https://pc-moscow.ru/legal/cookie-policy" style="color:rgba(255,255,255,.75);padding:6px 0" style-hover="color:#fff">Политика использования файлов cookie</a>
+      </div>
+    </div>
+    <p style="margin:28px 0 0;font-size:13px;line-height:1.7;color:rgba(255,255,255,.5);max-width:900px">Обращаем ваше внимание, что данный интернет‑сайт носит исключительно информационный характер и не является публичной офертой, определяемой положениями статьи 437 (2) Гражданского кодекса Российской Федерации.</p>
+    <p style="margin:14px 0 0;font-size:14px;line-height:1.7">PCM предоставляет услуги по продаже и сервисному обслуживанию автомобилей Porsche.<br>Мы всегда рады видеть Вас в числе своих друзей и клиентов.</p>
+    <div style="margin-top:28px;display:flex;gap:12px 36px;flex-wrap:wrap;font-size:14px;line-height:1.6">
+      <div style="font-weight:800;color:#fff">PCM</div>
+      <div>125445 Москва, Ленинградское шоссе, д.71А, стр.10</div>
+      <a href="tel:+74957879911" style="color:rgba(255,255,255,.75);padding:4px 0" style-hover="color:#fff">+7 (495) 787‑9‑911</a>
+      <a href="mailto:info@pc-moscow.ru" style="color:rgba(255,255,255,.75);padding:4px 0" style-hover="color:#fff">info@pc-moscow.ru</a>
+    </div>
+    <div style="margin-top:28px;font-size:13px;color:rgba(255,255,255,.4)">© 2026 PCM</div>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;layout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Чередование&quot;,&quot;Плитка&quot;],&quot;default&quot;:&quot;Плитка&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Модели&quot;}}">
+class Component extends DCLogic {
+  state = { expanded: -1, featOpen: 0, isMobile: typeof window !== 'undefined' && window.matchMedia('(max-width: 760px)').matches };
+  componentDidMount() {
+    this.mq = window.matchMedia('(max-width: 760px)');
+    this.onMq = (e) => this.setState({ isMobile: e.matches });
+    this.mq.addEventListener('change', this.onMq);
+  }
+  componentWillUnmount() { if (this.mq) this.mq.removeEventListener('change', this.onMq); }
+  renderVals() {
+    const layout = this.props.layout ?? 'Плитка';
+    const data = [
+      { num: '01', name: 'Porsche‑Diesel Junior', spec: '1 цилиндр · 822 см³ · 14 л.с.', img: 'images/junior.jpg',
+        text: 'Компактная модель, одна из самых популярных. Оснащалась одноцилиндровым дизельным двигателем воздушного охлаждения объёмом 822 см³ и мощностью 14 л.с. Имела трёхступенчатую коробку передач и два диапазона скоростей. Трактор применялся для пахоты, культивации почвы, уборки урожая и перевозки грузов на небольшие расстояния. Благодаря компактности и манёвренности модель была эффективна в работе на узких и ограниченных участках земли.' },
+      { num: '02', name: 'Porsche‑Diesel Standard', spec: '2 цилиндра · 25 л.с. · 6‑ступ. КПП', img: 'images/standart.jpg',
+        text: 'Модель с двухцилиндровым двигателем воздушного охлаждения. Мощность 25 л.с. развивал при 2000 об/мин, крутящий момент 91,2 Нм — при 1800 об/мин. Коробка передач механическая шестиступенчатая.' },
+      { num: '03', name: 'Porsche‑Diesel Super', spec: '3 цилиндра · 38 л.с. · 6‑ступ. КПП', img: 'images/super.jpg',
+        text: 'Более мощная версия с трёхцилиндровым мотором мощностью 38 л.с. с воздушным охлаждением. Коробка передач механическая шестиступенчатая.' },
+      { num: '04', name: 'Porsche‑Diesel Master', spec: '4 цилиндра · 50 л.с. · гидравлика', img: 'images/master.jpg',
+        text: 'Вершина линейки с четырёхцилиндровым двигателем мощностью 50 л.с. Трактор оснащался трёхточечной гидравлической навесной системой, валом отбора мощности и блокировкой дифференциала. Были предусмотрены отдельные тормоза как для движения, так и стояночный.' },
+    ];
+    const models = data.map((m, i) => ({
+      ...m,
+      dir: i % 2 ? 'rtl' : 'ltr',
+      border: this.state.expanded === i ? '#6e1423' : '#e7e7ea',
+      plusChar: this.state.expanded === i ? '−' : '+',
+      showInline: this.state.isMobile && this.state.expanded === i,
+      toggle: () => this.setState(s => ({ expanded: s.expanded === i ? -1 : i })),
+    }));
+    return {
+      isMobile: this.state.isMobile,
+      isDesktop: !this.state.isMobile,
+      isZigzag: layout === 'Чередование',
+      isTiles: layout === 'Плитка',
+      models,
+      expandedModel: !this.state.isMobile && this.state.expanded >= 0 ? models[this.state.expanded] : null,
+      features: [0,1,2,3,4].map(i => ({ idx: '0' + (i + 1), open: this.state.featOpen === i, chevron: this.state.featOpen === i ? '−' : '+', toggle: () => this.setState(s => ({ featOpen: s.featOpen === i ? -1 : i })), ...[
+        { title: 'Воздушное охлаждение двигателя', text: 'Инновационное решение своего времени.' },
+        { title: 'Модульная конструкция двигателя', text: 'Каждый цилиндр и его головка были съёмными и взаимозаменяемыми, что значительно упрощало обслуживание.' },
+        { title: 'Гидравлическая муфта между двигателем и трансмиссией', text: 'Сделана специально, чтобы упростить управление для фермеров, которые могли не уметь правильно работать со сцеплением.' },
+        { title: 'Трёхточечная гидравлическая навесная система', text: 'Позволяла подключать различное сельскохозяйственное оборудование.' },
+        { title: 'Вал отбора мощности (ВОМ)', text: 'Для привода дополнительного оборудования.' },
+      ][i] })),
+    };
+  }
+}
+</script>
+</body>
+</html>
